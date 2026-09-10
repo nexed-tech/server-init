@@ -74,7 +74,7 @@ if [ "$GITHUB_USER" != "YOUR_GITHUB_USERNAME" ]; then
     echo "📡 Fetching public keys for user: $GITHUB_USER..."
     
     # Download public keys into a temporary variable, filtering empty lines
-    PUB_KEYS=$(curl -s "https://github.com{GITHUB_USER}.keys" | grep -v '^$')
+    PUB_KEYS=$(curl -s "https://github.com/{GITHUB_USER}.keys" | grep -v '^$')
 
     if [ -n "$PUB_KEYS" ]; then
         # Read keys line by line to check and append individually
