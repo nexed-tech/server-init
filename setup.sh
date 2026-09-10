@@ -47,7 +47,7 @@ touch "$HOME/.bash_aliases"
 
 declare -A ALIASES
 ALIASES=(
-    ["dockup"]="echo 'Checking docker updates' && /home/tabang/dockcheck/dockcheck.sh -f -o -p -u -x 3 -y"
+    ["dockup"]="echo 'Checking docker updates' && $HOME/scripts/dockcheck.sh -f -o -p -u -x 3 -y"
 )
 
 for shortcut in "${!ALIASES[@]}"; do
